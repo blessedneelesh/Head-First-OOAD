@@ -1,0 +1,14 @@
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\bin\Debug\net8.0\Chapter 1.exe
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\bin\Debug\net8.0\Chapter 1.deps.json
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\bin\Debug\net8.0\Chapter 1.runtimeconfig.json
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\bin\Debug\net8.0\Chapter 1.dll
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\bin\Debug\net8.0\Chapter 1.pdb
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\obj\Debug\net8.0\Chapter 1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\obj\Debug\net8.0\Chapter 1.AssemblyInfoInputs.cache
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\obj\Debug\net8.0\Chapter 1.AssemblyInfo.cs
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\obj\Debug\net8.0\Chapter 1.csproj.CoreCompileInputs.cache
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\obj\Debug\net8.0\Chapter 1.dll
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\obj\Debug\net8.0\refint\Chapter 1.dll
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\obj\Debug\net8.0\Chapter 1.pdb
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\obj\Debug\net8.0\Chapter 1.genruntimeconfig.cache
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 1\obj\Debug\net8.0\ref\Chapter 1.dll
