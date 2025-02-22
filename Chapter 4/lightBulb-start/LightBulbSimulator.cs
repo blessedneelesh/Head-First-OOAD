@@ -1,0 +1,36 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Chapter_4.lightBulb_start
+{
+    public class LightBulbSimulator
+    {
+        public static void main(string[] args)
+        {
+            LightBulb lightBulb = new LightBulb();
+            MotionDetector detector = new MotionDetector(lightBulb);
+            Remote remote = new Remote(lightBulb);
+
+            Console.WriteLine("Motion detected...");
+            detector.DetectMotion(); // Simulate motion detection
+
+            Console.WriteLine("\nWaiting for motion to stop...");
+            Thread.Sleep(10000); // Simulate waiting for motion to stop
+
+            Console.WriteLine("\nNo motion detected, turning off the light bulb...");
+            remote.PressButton(); // Manually turn off the light bulb
+
+            Console.WriteLine("\nMotion detected again...");
+            detector.DetectMotion(); // Simulate motion detection again
+
+            Console.WriteLine("\nWaiting for motion to stop...");
+            Thread.Sleep(10000); // Simulate waiting for motion to stop
+
+            Console.WriteLine("\nNo motion detected, turning off the light bulb...");
+            remote.PressButton(); // Manually turn off the light bulb
+        }
+    }
+}

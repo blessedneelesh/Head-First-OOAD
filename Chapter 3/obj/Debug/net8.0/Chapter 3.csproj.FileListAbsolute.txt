@@ -1,0 +1,15 @@
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\obj\Debug\net8.0\Chapter 3.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\obj\Debug\net8.0\Chapter 3.AssemblyInfoInputs.cache
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\obj\Debug\net8.0\Chapter 3.AssemblyInfo.cs
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\obj\Debug\net8.0\Chapter 3.csproj.CoreCompileInputs.cache
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\obj\Debug\net8.0\Chapter 3.sourcelink.json
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\bin\Debug\net8.0\Chapter 3.exe
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\bin\Debug\net8.0\Chapter 3.deps.json
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\bin\Debug\net8.0\Chapter 3.runtimeconfig.json
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\bin\Debug\net8.0\Chapter 3.dll
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\bin\Debug\net8.0\Chapter 3.pdb
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\obj\Debug\net8.0\Chapter 3.dll
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\obj\Debug\net8.0\refint\Chapter 3.dll
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\obj\Debug\net8.0\Chapter 3.pdb
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\obj\Debug\net8.0\Chapter 3.genruntimeconfig.cache
+C:\Users\maharajn\NeeleshProject\OOAD\Github\Head-First-OOAD\Chapter 3\obj\Debug\net8.0\ref\Chapter 3.dll
