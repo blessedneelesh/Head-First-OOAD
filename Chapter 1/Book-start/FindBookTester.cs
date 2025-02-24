@@ -16,27 +16,31 @@ namespace Chapter_1.Book_start
 
             // Create a book that matches the user's preferences
             Book whatUserLikes = new Book("The Great Gatsby", "F. Scott Fitzgerald", "Fiction", "Scribner", 1925, "", 0);
-            Book book = inventory.Search(whatUserLikes);
+            List<Book> book = inventory.Search(whatUserLikes);
 
-            if (book != null)
+          
+            if (book.Count()>1)
             {
-                Console.WriteLine("You might like this book:\n" +
-                                  "Title: " + book.GetTitle() + "\n" +
-                                  "Author: " + book.GetAuthor() + "\n" +
-                                  "Genre: " + book.GetGenre() + "\n" +
-                                  "Publisher: " + book.GetPublisher() + "\n" +
-                                  "Year of Publication: " + book.GetYearOfPublication() + "\n" +
-                                  "Price: $" + book.GetPrice());
-            }
-            else
-            {
-                Console.WriteLine("Sorry, we have nothing for you.");
-            }
+                for (int i = 0; i < book.Count(); i++)
+                {
+                    Console.WriteLine("You might like this book:\n" +
+                                      "Title: " + book[i].GetTitle() + "\n" +
+                                      "Author: " + book[i].GetAuthor() + "\n" +
+                                      "Genre: " + book[i].GetGenre() + "\n" +
+                                      "Publisher: " + book[i].GetPublisher() + "\n" +
+                                      "Year of Publication: " + book[i].GetYearOfPublication() + "\n" +
+                                      "Price: $" + book[i].GetPrice()+"\n -------------");
+                }
+            }else
+                {
+                    Console.WriteLine("Sorry, we have nothing for you.");
+                }
         }
 
         private static void InitializeInventory(Inventory inventory)
         {
-            inventory.AddBook("The Great Gatsby", "F. Scott Fitzgerald", "Fiction", "Scribner", 1925, "9780743273565", 10.99);
+            inventory.AddBook("The Great Gatsby", "F. Scott Fitzgerald", "Fiction", "Scribner", 1925, "9780743273565", 11.99);
+            //inventory.AddBook("The Great Gatsby", "F. Scott Fitzgerald", "Fiction", "Scribner", 1925, "9780743272345", 10.99);
             inventory.AddBook("To Kill a Mockingbird", "Harper Lee", "Fiction", "J.B. Lippincott & Co.", 1960, "9780446310789", 7.99);
             inventory.AddBook("1984", "George Orwell", "Sci-Fi", "Secker & Warburg", 1949, "9780451524935", 6.99);
             inventory.AddBook("The Catcher in the Rye", "J.D. Salinger", "Fiction", "Little, Brown and Company", 1951, "9780316769488", 8.99);

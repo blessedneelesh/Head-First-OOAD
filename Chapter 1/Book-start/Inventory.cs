@@ -33,20 +33,22 @@ namespace Chapter_1.Book_start
             return null;
         }
 
-        public Book Search(Book searchBook)
+        public List<Book> Search(Book searchBook)
         {
-            foreach (Book book in books)
+            List<Book> matchingBooks=new List<Book>();
+            for(int i = 0; i < books.Count(); i++)
             {
+                Book book=books[i];
                 if ((searchBook.GetTitle() == null || searchBook.GetTitle().Equals(book.GetTitle())) &&
-                    (searchBook.GetAuthor() == null || searchBook.GetAuthor().Equals(book.GetAuthor())) &&
-                    (searchBook.GetGenre() == null || searchBook.GetGenre().Equals(book.GetGenre())) &&
-                    (searchBook.GetPublisher() == null || searchBook.GetPublisher().Equals(book.GetPublisher())) &&
-                    (searchBook.GetYearOfPublication() == 0 || searchBook.GetYearOfPublication() == book.GetYearOfPublication()))
+                  (searchBook.GetAuthor() == null || searchBook.GetAuthor().Equals(book.GetAuthor())) &&
+                  (searchBook.GetGenre() == null || searchBook.GetGenre().Equals(book.GetGenre())) &&
+                  (searchBook.GetPublisher() == null || searchBook.GetPublisher().Equals(book.GetPublisher())) &&
+                  (searchBook.GetYearOfPublication() == 0 || searchBook.GetYearOfPublication() == book.GetYearOfPublication()))
                 {
-                    return book;
+                    matchingBooks.Add(book);
                 }
             }
-            return null;
+            return matchingBooks;              
         }
     }
 }
