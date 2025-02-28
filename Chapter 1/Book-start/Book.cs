@@ -10,17 +10,21 @@ namespace Chapter_1.Book_start
     {
         private string title;
         private string author;
-        private string genre;
+        private Genre genre;
+        private Language language;
+        private Format format;
         private string publisher;
         private int yearOfPublication;
         private string isbn;
         private double price;
 
-        public Book(string title, string author, string genre, string publisher, int yearOfPublication, string isbn, double price)
+        public Book(string title, string author, Genre genre, Language language, Format format, string publisher, int yearOfPublication, string isbn, double price)
         {
             this.title = title;
             this.author = author;
             this.genre = genre;
+            this.language=language;
+            this.format = format;
             this.publisher = publisher;
             this.yearOfPublication = yearOfPublication;
             this.isbn = isbn;
@@ -37,9 +41,19 @@ namespace Chapter_1.Book_start
             return author;
         }
 
-        public string GetGenre()
+        public Genre GetGenre()
         {
             return genre;
+        }
+
+        public Language GetLanguage()
+        {
+            return language;
+        }
+
+        public Format GetFormat()
+        {
+            return format;
         }
 
         public string GetPublisher()

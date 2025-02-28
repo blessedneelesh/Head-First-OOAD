@@ -15,9 +15,9 @@ namespace Chapter_1.Book_start
             books = new List<Book>();
         }
 
-        public void AddBook(string title, string author, string genre, string publisher, int yearOfPublication, string isbn, double price)
+        public void AddBook(string title, string author, Genre genre, Language language, Format format, string publisher, int yearOfPublication, string isbn, double price)
         {
-            Book book = new Book(title, author, genre, publisher, yearOfPublication, isbn, price);
+            Book book = new Book(title, author, genre, language, format, publisher, yearOfPublication, isbn, price);
             books.Add(book);
         }
 
