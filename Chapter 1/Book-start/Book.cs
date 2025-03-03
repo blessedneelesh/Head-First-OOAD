@@ -3,43 +3,37 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using static System.Reflection.Metadata.BlobBuilder;
 
 namespace Chapter_1.Book_start
 {
     public class Book
     {
-        private string title;
+        private BookSpec bookSpec;
         private string author;
-        private string genre;
         private string publisher;
         private int yearOfPublication;
         private string isbn;
         private double price;
 
-        public Book(string title, string author, string genre, string publisher, int yearOfPublication, string isbn, double price)
+        public Book(BookSpec bookSpec, string author, string publisher, int yearOfPublication, string isbn, double price)
         {
-            this.title = title;
+            this.bookSpec = bookSpec;
             this.author = author;
-            this.genre = genre;
             this.publisher = publisher;
             this.yearOfPublication = yearOfPublication;
             this.isbn = isbn;
             this.price = price;
         }
 
-        public string GetTitle()
+        public BookSpec GetSpec()
         {
-            return title;
+            return bookSpec;
         }
 
         public string GetAuthor()
         {
             return author;
-        }
-
-        public string GetGenre()
-        {
-            return genre;
         }
 
         public string GetPublisher()

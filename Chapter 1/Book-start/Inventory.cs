@@ -15,9 +15,9 @@ namespace Chapter_1.Book_start
             books = new List<Book>();
         }
 
-        public void AddBook(string title, string author, string genre, string publisher, int yearOfPublication, string isbn, double price)
+        public void AddBook(BookSpec bookSpec, string author,  string publisher, int yearOfPublication, string isbn, double price)
         {
-            Book book = new Book(title, author, genre, publisher, yearOfPublication, isbn, price);
+            Book book = new Book(bookSpec, author, publisher, yearOfPublication, isbn, price);
             books.Add(book);
         }
 
@@ -33,20 +33,20 @@ namespace Chapter_1.Book_start
             return null;
         }
 
-        public Book Search(Book searchBook)
+        public List<Book> Search(BookSpec searchSpec)
         {
-            foreach (Book book in books)
+            List<Book> matchingBooks = new List<Book>();
+            for(int i = 0; i < books.Count(); i++)
             {
-                if ((searchBook.GetTitle() == null || searchBook.GetTitle().Equals(book.GetTitle())) &&
-                    (searchBook.GetAuthor() == null || searchBook.GetAuthor().Equals(book.GetAuthor())) &&
-                    (searchBook.GetGenre() == null || searchBook.GetGenre().Equals(book.GetGenre())) &&
-                    (searchBook.GetPublisher() == null || searchBook.GetPublisher().Equals(book.GetPublisher())) &&
-                    (searchBook.GetYearOfPublication() == 0 || searchBook.GetYearOfPublication() == book.GetYearOfPublication()))
+                Book book=books[i];
+                BookSpec bookSpec = book.GetSpec();
+
+                if (bookSpec.CompareBookSpec(searchSpec))
                 {
-                    return book;
-                }
+                    matchingBooks.Add(book);
+                }        
             }
-            return null;
+            return matchingBooks;              
         }
     }
 }
