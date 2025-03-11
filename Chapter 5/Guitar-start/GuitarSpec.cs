@@ -22,20 +22,12 @@ namespace Chapter_5.Guitar_start
             return numStrings;
         }
 
-        public override bool matches(GuitarSpec otherSpec)
+        public override bool matches(InstrumentSpec otherSpec)
         {
-            if (getBuilder() != otherSpec.getBuilder())
+            if (!base.matches(otherSpec))
                 return false;
-            if ((getModel() != null) && (!getModel().Equals("")) &&
-                (!model.ToLower().Equals(otherSpec.model.ToLower())))
-                return false;
-            if (type != otherSpec.type)
-                return false;
-            if (numStrings != otherSpec.numStrings)
-                return false;
-            if (backWood != otherSpec.backWood)
-                return false;
-            if (topWood != otherSpec.topWood)
+            GuitarSpec spec = (GuitarSpec)otherSpec;
+            if (numStrings != spec.numStrings)
                 return false;
             return true;
         }

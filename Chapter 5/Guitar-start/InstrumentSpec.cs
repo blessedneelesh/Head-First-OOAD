@@ -49,7 +49,7 @@ namespace Chapter_5.Guitar_start
             return topWood;
         }
 
-           virtual public bool matches(GuitarSpec otherSpec)
+         public virtual bool matches(InstrumentSpec otherSpec)
         {
             if (builder != otherSpec.builder)
                 return false;

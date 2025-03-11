@@ -8,24 +8,42 @@ namespace Chapter_5.Guitar_start
 {
     public class Inventory
     {
-        private List<Guitar> guitars;
+        private List<Instrument> inventory;
+        //private List<Guitar> guitars;
+        //private List<Mandolin> mandolins;
         public Inventory()
         {
-            guitars = new List<Guitar>();
+            //guitars = new List<Guitar>();
+            //mandolins = new List<Mandolin>();
+            inventory = new List<Instrument>();
         }
 
-        public void addGuitar(String serialNumber, double price, GuitarSpec spec){
-            Guitar guitar = new Guitar(serialNumber, price, spec);
-            guitars.Add(guitar);
-        }
-        public Guitar getGuitar(String serialNumber)
+        public void addInstrument(String serialNumber, double price, InstrumentSpec spec)
         {
-            for (int i = 0; i<guitars.Count(); i++)
+            Instrument instrument = null;
+            if (spec is GuitarSpec)
             {
-                Guitar guitar = guitars[i];
-                if (guitar.getSerialNumber().Equals(serialNumber))
+                instrument = new Guitar(serialNumber, price, (GuitarSpec)spec);
+            }else if(spec is MandolinSpec)
+            {
+                instrument = new Mandolin(serialNumber, price, (MandolinSpec) spec);
+            }
+               //Guitar guitar = new Guitar(serialNumber, price, spec);
+            inventory.Add(instrument);
+        }
+
+        //public void addGuitar(String serialNumber, double price, GuitarSpec spec){
+        //    Guitar guitar = new Guitar(serialNumber, price, spec);
+        //    guitars.Add(guitar);
+        //}
+        public Instrument get(String serialNumber)
+        {
+            for (int i = 0; i<inventory.Count(); i++)
+            {
+                Instrument instrument = inventory[i];
+                if (instrument.getSerialNumber().Equals(serialNumber))
                 {
-                    return guitar;
+                    return instrument;
                 }
             }
             return null;
@@ -33,15 +51,29 @@ namespace Chapter_5.Guitar_start
         public List<Guitar> search(GuitarSpec searchSpec)
         {
             List<Guitar> matchingGuitars = new List<Guitar>();
-            for (int i = 0; i< guitars.Count(); i++)
+            for (int i = 0; i< inventory.Count(); i++)
             {
-                Guitar guitar = guitars[i];
-                if (guitar.getSpec().matches(searchSpec))
-                    matchingGuitars.Add(guitar);
+                if (inventory[i] is Guitar guitar)
+                {
+                    if (guitar.getSpec().matches(searchSpec))
+                        matchingGuitars.Add(guitar);
+                }
             }
             return matchingGuitars;
         }
 
-
+        public List<Mandolin> search(MandolinSpec searchSpec)
+        {
+            List<Mandolin> matchingMandolin = new List<Mandolin>();
+            for (int i = 0; i < inventory.Count(); i++)
+            {
+                if (inventory[i] is Mandolin mandolin)
+                {
+                    if (mandolin.getSpec().matches(searchSpec))
+                        matchingMandolin.Add(mandolin);
+                }
+            }
+            return matchingMandolin;
+        }
     }
 }

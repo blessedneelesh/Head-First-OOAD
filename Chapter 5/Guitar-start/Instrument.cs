@@ -13,7 +13,7 @@ namespace Chapter_5.Guitar_start
     private double price;
     InstrumentSpec spec;
 
-    public Instrument(String _serialNumber, double _price, InstrumentSpec _spec)
+    public Instrument(string _serialNumber, double _price, InstrumentSpec _spec)
     {
         serialNumber = _serialNumber;
         price = _price;
@@ -35,7 +35,7 @@ namespace Chapter_5.Guitar_start
             this.price = newPrice;
         }
 
-        public InstrumentSpec getSpec()
+        public virtual InstrumentSpec getSpec()
         {
             return spec;
         }

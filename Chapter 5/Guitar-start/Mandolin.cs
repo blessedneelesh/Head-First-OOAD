@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Chapter_5.Guitar_start
 {
-    public class Guitar: Instrument
+    public class Mandolin:Instrument
     {
-        public Guitar(string serialNumber, double price, GuitarSpec spec)   
+        public Mandolin(string serialNumber, double price, MandolinSpec spec)
             : base(serialNumber, price, spec)
         {
         }
     }
 }
-
